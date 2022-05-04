@@ -1,5 +1,5 @@
 const search = (val, arr) => {
-    for (let i=0; i < arr.length; i += 2) {
+    for (let i=0; i < arr.length; i += 1) {
         console.log(i)
         if (val === arr[i]) {
         return i; 

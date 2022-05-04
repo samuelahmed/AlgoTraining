@@ -112,3 +112,60 @@ const inOrder = (root) => {
     inOrder(root.right);
 };
 // inOrder(a)
+
+
+
+
+//MAKING NEW NODE (CALLED NODES WITH S) SO I CAN BUILD A SUM TREE
+// THE SUM TREE IS CALLING A2 INSTEAD A IN CONSOLE LOG TO CONNECT WITH THIS TREE ISNTEAD OF THE TREE ABOVE
+class Nodes {
+    constructor(val) {
+        this.val = val; 
+        this.left = null; 
+        this.right = null; 
+    }
+}
+
+const a2 = new Nodes(3);
+const b2 = new Nodes(2);
+const c2 = new Nodes(7);
+const d2 = new Nodes(4);
+const e2 = new Nodes(-2);
+const f2 = new Nodes(5);
+
+a2.left = b2; 
+a2.right = c2;
+b2.left = d2;
+b2.right = e2;
+c2.right = f2; 
+
+//answer should be 19
+
+//ITERATIVE SUM TREE
+const sumTree = (root) => {
+    const stack = [ root ];
+    let sum = 0;
+    while (stack.length > 0) {
+       const currentNode = stack.pop();
+       sum += currentNode.val;
+
+       if (currentNode.right !== null){
+        stack.push(currentNode.right); 
+       }
+       if (currentNode.left !== null){
+        stack.push(currentNode.left);
+       } 
+    }
+    return sum;
+};
+
+// console.log(sumTree(a2))
+
+
+//RECURSIVE SUM TREE
+const sumTreeRecursive = (root) => {
+    if (root === null) return 0;
+    return sumTreeRecursive(root.left) + root.val + sumTreeRecursive(root.right);
+};
+
+// console.log(sumTreeRecursive(a2))

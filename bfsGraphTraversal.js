@@ -3,6 +3,8 @@
 // queue data structure 
 // queue to hold temprorarly // result arr for result 
 //FIGURE HOW TO TO TEST THIS SHIT IN VSCODE
+// TIME  O(n)
+// SPACE O(n)
 
 
  function TreeNode(val, left, right) {

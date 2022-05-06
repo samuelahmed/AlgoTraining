@@ -29,7 +29,8 @@ var levelOrder = (root) => {
     while (queue.length) {
         let len = queue.length;
         result.push(queue.map(node => node.val));
-
+        
+        //why does += -1 NOT WORK HERE?
         while(len--){
             let node = queue.shift();
             if(node.left) queue.push(node.left);

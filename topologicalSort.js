@@ -80,5 +80,58 @@ const sortByKahnsAlgorithm = (elementsArray) => {
     return sortedQueue
 };
 
-const result = sortByKahnsAlgorithm(elements);
-console.log(result);
+// const result = sortByKahnsAlgorithm(elements);
+// console.log(result);
+
+
+
+
+// LEETCODE 210 - course schedule 2 -- TOPOLOGICAL SORT ON A GRAPH PROBLEM 
+
+
+
+const buildAdjecencyList = (n, edges) => {
+    //make a new array that is mapped in the same space in memory??
+    const adjecencyList = Array.from({length: n}, () => []);
+
+    for(let edge of edges) {
+        let [source, destination] = edge;
+        adjecencyList[source].push(destination);
+
+    }
+    return adjecencyList;
+};
+ 
+//book: INTRODUCTION TO ALGORITHMS (good chapter on graphs, edge classifications)
+
+const dFs = (node, adjecencyList, visited, arrive, depart, topSort) => {
+    arrive[node] += 1;
+    visited[node] = true; 
+
+    for(let neighbor of adjecencyList[node]) {
+        if(!visited[neighbor]) {
+            visited[neighbor] = true;
+            if(dFs(neighbor, visited, arrive, depart, topSort)) return true; 
+        } else {
+            if(depart[neighbor] === 0) return true; 
+        }
+    }
+    depart[node] += 1;
+    topSort.push(node);
+    return false;
+};
+
+var findOrder = (numCourses, prerequisites) => {
+    const adjecencyList = buildAdjecencyList(numCourses, prerequisites);
+    const visited = {};
+    const arrive = new Array(numCourses).fill(0);
+    const depart = new Array(numCourses).fill(0);
+    const topSort = [];
+
+    for(let vertex = 0; vertex < adjecencyList.length; vertex += 1) {
+        if(!visited[vertex]) {
+            if(dFs(vertex, adjecencyList, visited, arrive, depart, topSort)) return [];
+        }
+     }
+     return topSort;
+}

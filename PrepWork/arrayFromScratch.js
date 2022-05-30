@@ -86,3 +86,14 @@ let objectLiteralNotation =
 for (i=1; i<=Object.keys(objectLiteralNotation).length; i+=1) {
     console.log((objectLiteralNotation[i]) + " is a " + (typeof(objectLiteralNotation[i])))
 }
+
+
+//forinloop
+
+for(let key in objectLiteralNotation){
+    console.log(objectLiteralNotation[key])
+}
+
+//adding value to objectliteratial notation.
+objectLiteralNotation.newValue = 'new value';
+console.log(objectLiteralNotation)

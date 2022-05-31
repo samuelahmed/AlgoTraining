@@ -1,6 +1,6 @@
-
-// console.log(myTable.getItem("firstName"));
-// console.log(myTable.getItem("lastName"));
-// console.log(myTable.getItem("age"));
-// console.log(myTable.getItem("dob"));
-// console.log(myTable.table)
+    for (let node of graph.nodes) {
+        console.log(`Node ${node.value}`)
+        for (let connectedNode of node.edgesList) {
+            console.log(`Node ${node.value} is connected to ${connectedNode.value}`)
+        }
+    }

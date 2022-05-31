@@ -75,3 +75,10 @@ function iterativeBinary(arr, target) {
 }
 
 console.log(iterativeBinary(values, 8))
+
+
+//random big 0 cheatsheet 
+// calc not depending on input size O(1)
+// loop O(n)
+// Nested loops O(n^2)
+// input size reduced by half O(log N)

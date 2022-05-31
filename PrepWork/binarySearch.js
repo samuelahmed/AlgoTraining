@@ -77,6 +77,10 @@ function iterativeBinary(arr, target) {
 console.log(iterativeBinary(values, 8))
 
 
+// BIG O = O(log n)
+
+
+
 //random big 0 cheatsheet 
 // calc not depending on input size O(1)
 // loop O(n)

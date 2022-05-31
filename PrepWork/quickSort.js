@@ -12,7 +12,6 @@
 
 const nums = [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]
 
-
 const pivot = (nums, left, right) => {
     let p = right;
     let j = left; 
@@ -32,7 +31,6 @@ const pivot = (nums, left, right) => {
 
     return i;
 }
-
 
 const quickSort = (nums, left = 0, right = nums.length - 1) => {
     if(left < right) {

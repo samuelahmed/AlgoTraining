@@ -78,8 +78,35 @@ const recursiveDepthFirstPrint = (root) => {
     console.log(root.val);
     recursiveDepthFirstPrint(root.left);
     recursiveDepthFirstPrint(root.right);
-
-
 };
 
+// time O(n)
+// space O(n)
+
 recursiveDepthFirstPrint(a)
+
+
+
+//pre-order (PARENT BEFORE CHILDREN)
+//SELF, LEFT,RIGHT 
+const pre_orderRecursiveDepthFirstPrint = (root) => {
+    //base case - if tree is empty.
+    if (root === null) {
+        return;
+    };
+    console.log(root.val);
+    pre_orderRecursiveDepthFirstPrint(root.left);
+    pre_orderRecursiveDepthFirstPrint(root.right);
+};
+pre_orderRecursiveDepthFirstPrint(a)
+
+
+//post-order
+
+
+
+
+
+
+
+//in-order 

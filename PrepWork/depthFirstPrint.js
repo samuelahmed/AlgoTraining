@@ -43,7 +43,7 @@ c.right = f;
 
 
 const depthFirstPrint = (root) => {
-    const stack = [root];
+    const stack = [ root ];
     while (stack.length > 0) {
         //current element, considered visited when it leaves the stack 
         const curr = stack.pop();
@@ -59,3 +59,27 @@ const depthFirstPrint = (root) => {
 };
 
 depthFirstPrint(a);
+
+// time O(n) -> because everyone node enters 1 time
+// Space O(n) -> because of the array will have max elements 
+
+//notes: can also be done with recursion 
+
+
+console.log('end of iterative solution')
+console.log('start recuvsive solution')
+
+const recursiveDepthFirstPrint = (root) => {
+    //base case - if tree is empty.
+    if (root === null) {
+        return;
+    };
+
+    console.log(root.val);
+    recursiveDepthFirstPrint(root.left);
+    recursiveDepthFirstPrint(root.right);
+
+
+};
+
+recursiveDepthFirstPrint(a)

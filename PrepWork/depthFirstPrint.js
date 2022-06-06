@@ -42,4 +42,20 @@ c.right = f;
 
 
 
-const dfsPrint = 
+const depthFirstPrint = (root) => {
+    const stack = [root];
+    while (stack.length > 0) {
+        //current element, considered visited when it leaves the stack 
+        const curr = stack.pop();
+        console.log(curr.val)
+        //add curr's children to top of stack (checking to make sure they are not null if null don't add)
+        if (curr.right !== null) {
+            stack.push(curr.right);
+        }
+        if (curr.left !== null) {
+            stack.push(curr.left);
+        }
+    }
+};
+
+depthFirstPrint(a);

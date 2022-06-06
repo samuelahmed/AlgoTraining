@@ -85,7 +85,7 @@ const recursiveDepthFirstPrint = (root) => {
 
 recursiveDepthFirstPrint(a)
 
-
+console.log("PRE ORDER")
 
 //pre-order (PARENT BEFORE CHILDREN)
 //SELF, LEFT,RIGHT 
@@ -102,11 +102,38 @@ pre_orderRecursiveDepthFirstPrint(a)
 
 
 //post-order
+// (LEFT, RIGHT, SELF) CHILDREN BEFORE SELF
+// DEBFC
+
+console.log("POST ORDER")
+
+const post_orderRecursiveDepthFirstPrint = (root) => {
+    //base case - if tree is empty.
+    if (root === null) {
+        return;
+    };
+    post_orderRecursiveDepthFirstPrint(root.left);
+    post_orderRecursiveDepthFirstPrint(root.right);
+    console.log(root.val);
+
+};
+post_orderRecursiveDepthFirstPrint(a)
 
 
 
-
-
-
+console.log("IN ORDER")
 
 //in-order 
+//(LEFT, MYSELF, RIGHT)
+
+const in_orderRecursiveDepthFirstPrint = (root) => {
+    //base case - if tree is empty.
+    if (root === null) {
+        return;
+    };
+    in_orderRecursiveDepthFirstPrint(root.left);
+    console.log(root.val);
+    post_orderRecursiveDepthFirstPrint(root.right);
+
+};
+in_orderRecursiveDepthFirstPrint(a)

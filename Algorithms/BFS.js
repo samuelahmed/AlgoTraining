@@ -27,11 +27,11 @@ const bfs = (graph, root) => {
 
         let currentConnected = graph[current];
         let neighborIndex = [];
-        let firstConnectedNode = currentConnected.indexOf(1);
+        let firstConnected = currentConnected.indexOf(1);
 
-        while (firstConnectedNode != -1) {
-            neighborIndex.push(firstConnectedNode);
-            firstConnectedNode = currentConnected.indexOf(1, firstConnectedNode + 1);
+        while (firstConnected != -1) {
+            neighborIndex.push(firstConnected);
+            firstConnected = currentConnected.indexOf(1, firstConnected + 1);
         }
 
         for (let j = 0; j < neighborIndex.length; j += 1) {
@@ -43,7 +43,6 @@ const bfs = (graph, root) => {
     }
     return rootDistance;
 };
-
 
 //graph 
 var exBFSGraph = [

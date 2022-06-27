@@ -18,6 +18,7 @@
  
 //  {TreeNode} root
 //  {number[][]}
+
 root = [3,9,20,null,null,15,7]
 
 var levelOrder = (root) => {
@@ -40,4 +41,4 @@ var levelOrder = (root) => {
     return result;
 };
 
-console.log(levelOrder(9));
+console.log(levelOrder(root, result));

@@ -6,6 +6,9 @@
 // TIME  O(n)
 // SPACE O(n)
 
+/// HAS NOT BEEN TRASFERED TO PAPER
+//from: https://www.youtube.com/watch?v=k51JOgA0mw0
+
 
  function TreeNode(val, left, right) {
       this.val = (val===undefined ? 0 : val)
@@ -13,11 +16,8 @@
       this.right = (right===undefined ? null : right)
   }
  
-
 //  {TreeNode} root
 //  {number[][]}
-
-
 root = [3,9,20,null,null,15,7]
 
 var levelOrder = (root) => {
@@ -40,4 +40,4 @@ var levelOrder = (root) => {
     return result;
 };
 
-console.log(levelOrder(root))
+console.log(levelOrder(9));

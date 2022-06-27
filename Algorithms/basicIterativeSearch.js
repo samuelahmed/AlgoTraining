@@ -1,3 +1,5 @@
+//source lost
+
 const search = (val, arr) => {
     for (let i=0; i <= arr.length; i += 1) {
         // console.log(i)

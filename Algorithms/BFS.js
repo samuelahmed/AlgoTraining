@@ -5,6 +5,7 @@
 // visit neightbor + add its neightbors to queue, etc.
 // for queue we either enqueue or dequeue, it also has a front and back
 //REDO THIS WITH BETTER VARIABLE NAMES
+//From: https://www.youtube.com/watch?v=wu0ckYkltus
 
 
 const bfs = (graph, root) => {

@@ -19,9 +19,9 @@ const binarySearch = (val, arr) => {
     return 'VALUE NOT FOUND';
 }
 
-const values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9999]
+const values = [0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9999]
 
-console.log(binarySearch(9999, values))
+console.log(binarySearch(4, values))
 
 
 

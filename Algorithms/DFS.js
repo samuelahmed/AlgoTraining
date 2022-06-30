@@ -60,7 +60,7 @@ const depthFirstPrint = (root) => {
     }
 };
 
-// depthFirstPrint(a)
+// depthFirstPrint(b)
 // TIME: O(n)
 // SPACE: O(n)
 

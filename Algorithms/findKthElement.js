@@ -12,13 +12,10 @@
 //time: O(n log n)
 //
 
-
-
 // var findKthLargestEasy = (nums, k) => {
 //     nums.sort((a, b) => b - a)
 //     return nums[k - 1]
 // };
-
 
 
 
@@ -75,4 +72,7 @@ var findKthLargestBetter = (nums, k) => {
 
 
 console.log(findKthLargestBetter(nums, target))
+
+
 // console.log(findKthLargestEasy(nums, target))
+//console.log

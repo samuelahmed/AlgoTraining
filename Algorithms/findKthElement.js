@@ -75,4 +75,4 @@ console.log(findKthLargestBetter(nums, target))
 
 
 // console.log(findKthLargestEasy(nums, target))
-//console.log
+//console.log(nums, target)

@@ -9,13 +9,22 @@ A customer's wealth is the amount of money they have in all their bank accounts.
 
 
 
-NOTES: 
+NOTES:
+list of customers
+each customer has money in banks 
+what is the wealth of the richest customer
+add all their money together
+return the AMOUNT OF MONEY THE RICHEST CUSTOMER HAS
 
-    //initalize an answer 
-    //loop through the accounts 
-    //initatize a temp variable
-    //loop within accounts and add up wealth
-    //return the account with most wealth
+
+STEPS:
+initalize an answer 
+loop through the people - i
+initatize a temp variable
+loop through their banks - j
+and add up wealth in temp 
+use math max to find the higest number
+return the account with most wealth
 /*/
 
 

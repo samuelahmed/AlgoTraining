@@ -10,8 +10,11 @@ Return the array ans.
 
 
 NOTES: 
-//split array twice ...[],...[]
+//split array twice ...[],...[]  //take array and split into two 
+                                    // return both arrays within one
 // return split value
+
+
 /*/
 
 

@@ -9,8 +9,14 @@ Return a boolean array result of length n, where result[i] is true if, after giv
 Note that multiple kids can have the greatest number of candies.
 
 
+NOTES
+array of kids with candies = candies
+i is each kid and how many candies they have
+extraCandies set number can be given to any kid in array
+return boolean array of whether each kid will have max candies if given the extra candies 
 
-NOTES: 
+
+STEPS: 
     //create return array result 
     //add a max value to track biggest truthy input
     //loop through candies with of loop 
@@ -36,3 +42,22 @@ var kidsWithCandies = function(candies, extraCandies) {
 
     return ret; 
 }
+
+
+
+
+
+var kidsWithCandies = function(candies, extraCandies) {
+    
+    let answer = []
+    let max = 0
+    
+    for(let i=0; i<candies.length; i++){
+        candies[i] > max && (max = candies[i])
+    }
+    
+    for(let j=0; j<candies.length; j++){
+        answer.push(candies[j] + extraCandies >= max)
+    }
+    return answer
+};

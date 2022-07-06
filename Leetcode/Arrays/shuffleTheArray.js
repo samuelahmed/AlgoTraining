@@ -21,10 +21,6 @@ NOTES:
 
 
 
-
-
-
-
 var shuffle = function (nums, n) {
     let res = [];
 

@@ -10,6 +10,13 @@ You are given the encoded array. You are also given an integer first, that is th
 
 Return the original array arr. It can be proved that the answer exists and is unique.
 
+NOTES: 
+
+// initialize answer array with first
+// for loop through encoded 
+// push answer through answer[i] ^ encoded[i]
+//return answer
+
 /*/
 
 const decode = (encoded, first) => {

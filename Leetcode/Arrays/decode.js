@@ -12,6 +12,12 @@ Return the original array arr. It can be proved that the answer exists and is un
 
 NOTES: 
 
+find hidden array from given info
+array is hidden in encoded
+first is the 1st 0th index of answer
+
+
+
 // initialize answer array with first
 // for loop through encoded 
 // push answer through answer[i] ^ encoded[i]

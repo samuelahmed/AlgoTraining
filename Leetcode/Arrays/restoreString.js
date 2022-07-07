@@ -23,3 +23,4 @@ const restoreString = (s, indices) => {
     }
     return result.join('');
 }
+

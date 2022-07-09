@@ -13,7 +13,6 @@ NOTES:
 /*/
 
 
-
 const mostWordsFound = (sentence) => {
     let max = 0;
     let temp = 0;
@@ -24,5 +23,6 @@ const mostWordsFound = (sentence) => {
             max = temp;
         }
     }
+    
     return max;
 }

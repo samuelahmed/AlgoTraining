@@ -15,7 +15,6 @@ It is guaranteed that the insertion operations will be valid.
 
 const createTargetArray = (nums, array) => {
     let target = [];
-
     for( let i=0; i<array.length; i++){
         for(let j=0; j<i; j++){
             if(array[i] <= array[j]){
@@ -23,10 +22,8 @@ const createTargetArray = (nums, array) => {
             }
         }
     }
-
     for(const i in nums){
         target[array[i]] = nums[i]
     }
-
     return target
 }

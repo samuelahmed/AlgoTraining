@@ -17,9 +17,8 @@ With MAP:
 
 
 
-
 */
 
 const buildArray = (nums) => {
-    return nums.map(index => nums[index])
+    return nums.map(answer => nums[answer])
 }

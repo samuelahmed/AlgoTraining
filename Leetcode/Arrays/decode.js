@@ -26,9 +26,7 @@ first is the 1st 0th index of answer
 /*/
 
 const decode = (encoded, first) => {
-
     let result = [first];
-
     for(let i = 0; i<encoded.length; i++){
         result.push(result[i] ^ encoded[i])
     }

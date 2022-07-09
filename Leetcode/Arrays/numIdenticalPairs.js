@@ -17,8 +17,6 @@ loop through the array i
 loop again through the values j let j=i+1
 setup consition if nums i===j increase counter, 
 return counter
-
-
 /*/
 
 
@@ -35,5 +33,6 @@ var numIdenticalPairs = function (nums) {
             }
         }
     }
+
     return count; 
 }

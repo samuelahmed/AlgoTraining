@@ -13,9 +13,6 @@ Given an array of strings operations containing a list of operations, return the
 
  
 
-
-
-
 NOTES: 
 // initatize final value
 //loop through the operations values (not index) i 
@@ -30,11 +27,14 @@ NOTES:
 
 
 const finalValueAfterOperations = (operations) => {
+
     let count = 0;
+
     for (let i of operations) {
         if (i === 'X++' || i === '++X') {
             count++
         } else count --;
     }
+    
     return count;
 }

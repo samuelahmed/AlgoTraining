@@ -11,6 +11,7 @@ A subarray is a contiguous subsequence of the array.
 /*/
 
 const sumOddLengthSubarrays = (arr) => {
+    
     let count = 0;
 
     for(let i=0; i<arr.length; i++){
@@ -22,5 +23,6 @@ const sumOddLengthSubarrays = (arr) => {
             }
         }
     }
+
     return count;
 }

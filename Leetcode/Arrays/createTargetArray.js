@@ -11,6 +11,15 @@ Return the target array.
 
 It is guaranteed that the insertion operations will be valid.
 
+
+STEPS: 
+
+1. initialize empty target array
+2. loop through array the length 
+3. loop though each index of the previous loop
+4. if array[i] is less than or equal to inner loop, increment inner loop
+5. loop in the nums array giving target the value: target[array[j]] = nums[i]
+6. return target 
 /*/
 
 const createTargetArray = (nums, array) => {

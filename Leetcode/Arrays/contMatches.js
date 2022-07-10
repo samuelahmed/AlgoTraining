@@ -11,7 +11,10 @@ ruleKey == "color" and ruleValue == colori.
 ruleKey == "name" and ruleValue == namei.
 Return the number of items that match the given rule.
 
-
+1. create rule index
+2. reduce ans & items so that rule index [rule key] is equal to ruleValue
+3. if equal increase ans by 1
+4. if not equal answer is 0 
 
 
 /*/

@@ -30,8 +30,8 @@ fillArray2.fill(0,3,5)
 
 
 //simple map example * 2
-const numbers = [1,2,3,4,5];
-let mapNumbers = numbers.map(nums => (nums * 2))
+// const numbers = [1,2,3,4,5];
+// let mapNumbers = numbers.map(nums => (nums * 2))
 //[ 2, 4, 6, 8, 10 ]
 
 
@@ -73,3 +73,18 @@ const totalProductValueObject = products.map(item => ({
 //     { name: 'phone', totalValue: 100000 }
 // ]
 
+
+
+
+//push
+
+// const numbers = [1,2,3,4,5]
+// numbers.push(6)
+//[ 1, 2, 3, 4, 5, 6 ]
+// numbers.push(6,7,8,9,10)
+//[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//note: if done in order above it would be 
+//[1, 2, 3, 4, 5, 6, 6, 7, 8, 9, 10]
+// const total = numbers.push(6,7,8,9,10)
+//10
+//note: would be 16 if done as above 

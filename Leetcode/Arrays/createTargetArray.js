@@ -27,3 +27,12 @@ const createTargetArray = (nums, array) => {
     }
     return target
 }
+
+
+//WITH SPLICE 
+
+const createTargetArray = (nums, idx) => {
+    let target = []
+    for(const i in nums)target.splice(idx[i], 0, nums[i])
+    return target
+};

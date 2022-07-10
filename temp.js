@@ -32,15 +32,44 @@ fillArray2.fill(0,3,5)
 //simple map example * 2
 const numbers = [1,2,3,4,5];
 let mapNumbers = numbers.map(nums => (nums * 2))
-console.log(mapNumbers)
 //[ 2, 4, 6, 8, 10 ]
 
 
 //map to turn string number into reg number with Number operator
 const stringNumbers = ['1', '2', '3', '4', '5']
 const regNumbers = stringNumbers.map(Number)
-console.log(regNumbers)
 // [ 1, 2, 3, 4, 5 ]
 
 
-//
+//map to manipulate object
+const products = [
+    {
+        name: 'laptop',
+        price: 1500,
+        count: 5
+    },
+    {
+        name: 'desktop',
+        price: 2000,
+        count: 10
+    },
+    {
+        name: 'phone',
+        price: 1000,
+        count: 100
+    }
+];
+
+const totalProductValue = products.map(item => item.price * item.count);
+//[ 7500, 20000, 100000 ]
+
+const totalProductValueObject = products.map(item => ({
+    name: item.name,
+    totalValue: item.price * item.count
+}));
+// [
+//     { name: 'laptop', totalValue: 7500 },
+//     { name: 'desktop', totalValue: 20000 },
+//     { name: 'phone', totalValue: 100000 }
+// ]
+

@@ -88,3 +88,20 @@ const totalProductValueObject = products.map(item => ({
 // const total = numbers.push(6,7,8,9,10)
 //10
 //note: would be 16 if done as above 
+
+
+//splice 
+
+const numbers = [1,2,3,4,5];
+
+numbers.splice(2,3)
+//[ 1, 2 ]
+let deleted = numbers.splice(2,3)
+//[ 3, 4, 5 ]
+
+numbers.splice(2,3,6,9)
+//[ 1, 2, 6, 9 ]
+
+numbers.splice(2,0,6,9)
+//[ 1, 2, 6, 9, 3, 4, 5 ]
+

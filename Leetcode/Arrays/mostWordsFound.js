@@ -9,6 +9,11 @@ You are given an array of strings sentences, where each sentences[i] represents 
 Return the maximum number of words that appear in a single sentence.
 
 NOTES: 
+1. initialize max and temp variables at zero 
+2. loop through sentence.length 
+3. split sentences based on paratheses and add the length of each to temp variable 
+4. find which temp or max is biggest
+5. return max 
 
 /*/
 
@@ -23,6 +28,18 @@ const mostWordsFound = (sentence) => {
             max = temp;
         }
     }
-    
+
     return max;
+}
+
+
+const mostWordsFound2 = (sentence) => {
+    let max = 0 
+    let temp = 0
+
+    for(let i in sentence){
+    temp = sentence[i].split(" ").length;
+    }
+
+    return Math.max(max, temp) 
 }

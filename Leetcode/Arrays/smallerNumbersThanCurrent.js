@@ -34,12 +34,13 @@ NOTES:
 // }
 
 const smallerNumbersThanCurrent = (nums) => {
-    results = []
 
-    sorted = nums.slice().sort((a,b)=>a-b)
+    let results = []
+    let sorted = nums.slice().sort((a,b)=>a-b)
 
     for(let i = 0; i<nums.length; i++){
         result.push(sorted.indexOf(nums[i]))
     }
+
     return results
 }

@@ -9,10 +9,12 @@ Given the string command, return the Goal Parser's interpretation of command.
 
 
 Steps. 
-1. 
-
-
+1. split command by () join o in place
+2. split command by (al) join al in place
+3. return command
 
 */
 
-
+const interpret = (command) => {
+    return command.split('()').join('o').split('(al)').join('al')
+};

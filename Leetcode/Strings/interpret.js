@@ -9,9 +9,9 @@ Given the string command, return the Goal Parser's interpretation of command.
 
 
 Steps. 
-1. split command by () join o in place
-2. split command by (al) join al in place
-3. return command
+1. Split command by () join o in place
+2. Split command by (al) join al in place
+3. Return command
 
 */
 

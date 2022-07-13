@@ -12,11 +12,11 @@ Given a shuffled sentence s containing no more than 9 words, reconstruct and ret
 
 
 STEPS: 
-1.
-2.
-3.
-4.
-5.
+1. Return s.split to put into parts
+2. Sort by number orders and use x[x.length-1] to find last item (the number)
+3. Map to remove the last item (the number) from the words
+4. Join(' ') to turn it back into a string as opposed to array
+
 
 */
 
@@ -27,3 +27,14 @@ const sortSentence = function(s) {
         .map((word) => word.slice(0, word.length-1))
         .join(' ');
  };
+
+
+
+ const key = '1234556'
+
+     
+ let str = key
+ let wtf = Array.from(str)
+ console.log(typeof(wtf))
+ console.log(wtf)
+

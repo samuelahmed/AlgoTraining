@@ -12,61 +12,57 @@ Return the maximum amount of split balanced strings.
 
 STEPS: 
 
-1. 
+1. Initalize empty matches variable
+2. Initalize empty balance variable
+3. Loop through s.length
+4. If each S[i] is equal to L add +1 to balance, else reduce it by one
+5. If balance is equal to zero add +1 to matches 
+6. Return matches 
 
 
 
 
 */
+//O(n) O(1)
 
-
-var balancedStringSplit = function(s) {
+const balancedStringSplit = (s) => {
     
     let matches = 0;
-	let balance = 0;
+    let balance = 0;
 
-	for (let i = 0; i < s.length; i++) {
+    for (let i = 0; i < s.length; i++) {
+        s[i] === 'L' ? balance++ : balance--
+        if (balance === 0) {
+            matches++;
+        }
+    }
 
-		if (s[i] === "R") {
-			balance -= 1;
-		} else if (s[i] === "L") {
-			balance += 1;
-		}
-
-		if (balance === 0) {
-			matches += 1;
-		}
-	}
-
-	return matches;
+    return matches;
 };
 
 
 
 //USING STACK
-var balancedStringSplit = function(s) {
-    
-    let matches = 0;
-	const stack = [];
+var balancedStringSplitStack = function(s) {
 
-	stack.push(s[0]);
+    let matches = 0
+    const stack = []
 
-	for (let i = 1; i < s.length; i++) {
+    stack.push(s[0])
 
-		const top = stack[stack.length - 1];
+    for (let i = 1; i < s.length; i++) {
+        const top = stack[stack.length - 1];
+        if (top !== undefined && top !== s[i]) {
+          stack.pop()
+        } else {
+            stack.push(s[i]);
+        }
+        if (stack.length === 0) {
+            matches += 1;
+        }
+    }
 
-		if (top !== undefined && top !== s[i]) {
-			stack.pop()
-		} else {
-			stack.push(s[i]);
-		}
-
-		if (stack.length === 0) {
-			matches += 1;
-		}
-	}
-
-	return matches;
-};
+    return matches;
+}
 
 

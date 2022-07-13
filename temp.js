@@ -1,7 +1,7 @@
-const names = ['sam', 'bill', 'steve', 'matt']
-const idx = names.indexOf('sam')
-names[idx] = 'replaced-sam'
-console.log(names)
+// const names = ['sam', 'bill', 'steve', 'matt']
+// const idx = names.indexOf('sam')
+// names[idx] = 'replaced-sam'
+// console.log(names)
 //[ 'replaced-sam', 'bill', 'steve', 'matt' ]
 
 
@@ -92,17 +92,17 @@ const totalProductValueObject = products.map(item => ({
 
 //splice 
 
-const numbers = [1,2,3,4,5];
+// const numbers = [1,2,3,4,5];
 
-numbers.splice(2,3)
+// numbers.splice(2,3)
 //[ 1, 2 ]
-let deleted = numbers.splice(2,3)
+// let deleted = numbers.splice(2,3)
 //[ 3, 4, 5 ]
 
-numbers.splice(2,3,6,9)
+// numbers.splice(2,3,6,9)
 //[ 1, 2, 6, 9 ]
 
-numbers.splice(2,0,6,9)
+// numbers.splice(2,0,6,9)
 //[ 1, 2, 6, 9, 3, 4, 5 ]
 
 
@@ -113,3 +113,44 @@ numbers.splice(2,0,6,9)
 
 
 
+const numbers = [1,2,3,4,5,-1]
+
+// const res = numbers.some(greaterThanThree)
+
+// function greaterThanThree(num) {
+//     return num > 3;
+// }
+
+// const res = numbers.every(isPositive)
+//false
+function isPositive(num) {
+    return num > 0;
+}
+
+
+
+const names = ['Sam', 'Gabe', 'Troy']
+
+const namedPerson = names.find(findName)
+//Gabe
+
+function findName(name) {
+    return name === 'Gabe'
+}
+
+
+// const res = names.includes('Sam')
+// true
+// const res = names.includes('Bill')
+// false
+
+const inventory = [
+    {name: 'apples', quantity: 2},
+    {name: 'bananas', quantity: 0},
+    {name: 'cherries', quantity: 5}
+  ];
+  
+  const result = inventory.find( ({ name }) => name === 'cherries' );
+  //{ name: 'cherries', quantity: 5 }
+  const result = inventory.find( ({ name }) => name === 'cherries' ).quantity;
+  //5

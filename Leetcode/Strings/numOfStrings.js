@@ -24,6 +24,7 @@ var numOfStrings = function(patterns, word) {
             answer++
         }
     }
+    
 return answer
 
 };

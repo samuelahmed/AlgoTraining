@@ -24,20 +24,23 @@ NOTES:
 
 
 var removeOuterParentheses = function(s) {
+
     let result = '';
     let open = 0
+
     for (let i = 0; i < s.length; i++) {
         if (s[i] === '(') {
-            if (open > 0) { 
-				result += '(';
-			}
-			open++;
+           if (open > 0) { 
+                result += '(';
+            }
+            open++;
         } else if (s[i] === ')') {
-            if (open > 1) { 
-				result += ')'; 
-			}
-			open--;
+           if (open > 1) { 
+                result += ')'; 
+            }
+            open--;
         }
     }
+
     return result;
 };

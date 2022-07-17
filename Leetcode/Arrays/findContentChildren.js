@@ -15,6 +15,9 @@ Loop with forEach through (s) and if  child is greater than g[answer]  increment
 Return Answer
 
 
+
+
+
 */
 
 

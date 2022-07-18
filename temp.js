@@ -150,7 +150,20 @@ const inventory = [
     {name: 'cherries', quantity: 5}
   ];
   
-  const result = inventory.find( ({ name }) => name === 'cherries' );
+//   const result = inventory.find( ({ name }) => name === 'cherries' );
   //{ name: 'cherries', quantity: 5 }
-  const result = inventory.find( ({ name }) => name === 'cherries' ).quantity;
+//   const result = inventory.find( ({ name }) => name === 'cherries' ).quantity;
   //5
+
+
+
+// let testString = '1337demo' 
+// let parseIntDemo = parseInt(testString)
+//1337
+
+
+let testString = 'doesnotwork1337.37.37demo'
+let parseIntDemo = parseInt(testString)
+//NaN
+
+console.log(parseIntDemo)

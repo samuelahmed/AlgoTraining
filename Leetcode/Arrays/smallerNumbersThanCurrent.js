@@ -35,12 +35,12 @@ NOTES:
 
 const smallerNumbersThanCurrent = (nums) => {
 
-    let results = []
+    let answer = []
     let sorted = nums.slice().sort((a,b)=>a-b)
 
     for(let i = 0; i<nums.length; i++){
-        result.push(sorted.indexOf(nums[i]))
+        answer.push(sorted.indexOf(nums[i]))
     }
 
-    return results
+    return answer
 }

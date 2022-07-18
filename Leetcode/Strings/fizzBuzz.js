@@ -13,8 +13,13 @@ answer[i] == i (as a string) if none of the above conditions are true.
  
 
 STEPS
-
-
+Initialize empty answer array
+Loop through n starting at 1 and ending when <= n
+If i  modulo 15 is equal to zero push string 'FizzBuzz'
+Else if i  modulo 5 is equal to zero push string 'Buzz'
+Else if i  modulo 3 is equal to zero push string 'Fizz'
+Else push string i 
+Return Answer 
 */
 
 // time O(n) space O(n)
@@ -30,6 +35,7 @@ const fizzBuzz = (n) => {
             result.push('Buzz')
         } else {
             result.push(i.toString())
+            //answer.push(String(i))
         }
     }
     

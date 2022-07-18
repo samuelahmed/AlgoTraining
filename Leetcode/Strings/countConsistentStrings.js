@@ -9,9 +9,13 @@ Return the number of consistent strings in the array words.
 
 
 STEPS: 
-
-
-
+Initialize empty answer array 
+For of loop through i of words
+Set word equals to i 
+Loop through word.length and set wordChar as word[j]
+If !allowed includes wordChar break
+Else if j===word.length -1 push word.length to answer
+Return answer.length
 
 */
 

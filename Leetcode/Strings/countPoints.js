@@ -14,41 +14,49 @@ For example, "R3G2B1" describes n == 3 rings: a red ring placed onto the rod lab
 Return the number of rods that have all three colors of rings on them.
 
 STEPS: 
-x
+Initialize new Map() called map
+Initialize answer int to zero 
+Loop through rings.length 
+Set color to rings[i]
+Set rod to +rings[i+1]
+If !map has rod Map.set rod, new Set()
+Map.get rod.add(color)
+Loop through map with [rod, setColors]
+If set color size is equal to 3 answer ++
+Return answer
 
 */
 
 
 
 
-var countPoints = function (rings) {
-    let n = rings.length;
-
-    // map of  rod nums  to their  set of colors
-    let map = new Map(); 
-
-    for (let i = 0; i < n; i += 2) {
-        let color = rings[i];
-        let rod = +rings[i + 1];
-
-        if (!map.has(rod)) map.set(rod, new Set());
-        map.get(rod).add(color);
+const countPoints = (rings) => {
+    
+    let map = new Map()
+    let answer = 0
+    
+    for(let i = 0; i<rings.length; i += 2){
+        let color = rings[i]
+        let rod = +rings[i + 1]
+        
+        if(!map.has(rod))
+            map.set(rod, new Set())
+            map.get(rod).add(color)
     }
-
-    let count = 0;
-
-    for (let [rod, setColors] of map) {
-        if (setColors.size == 3) count++;
+    
+    for(let [rod, setColors] of map){
+        if(setColors.size === 3){
+            answer++
+        }
     }
-
-    return count;
-};
-
+    
+    return answer
+}
 
 
 
 //slower solution maybe?
-var countPoints = function(rings) {
+var countPoints2 = function(rings) {
 
     let rods = Array(10).fill("");
 

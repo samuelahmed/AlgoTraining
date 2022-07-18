@@ -11,7 +11,10 @@ A substring is a contiguous sequence of characters within a string.
 
 
 NOTES: 
-
+Initialize answer to zero 
+Loop through patterns
+If word includes(patter[i]) increment answer
+Return answer
 
 */
 

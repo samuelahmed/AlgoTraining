@@ -20,6 +20,15 @@ Given a VPS represented as string s, return the nesting depth of s.
 NOTES:
 
 
+Initialize answer int at zero
+Initialize counter int at zero
+For loop through s
+If s[i] is equal to ( answer.math.max(answer, ++counter)
+Else decrement counter
+Return answer
+
+
+
 */
 
 

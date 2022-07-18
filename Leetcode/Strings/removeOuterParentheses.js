@@ -16,7 +16,12 @@ Return s after removing the outermost parentheses of every primitive string in t
 
 
 NOTES: 
-
+Initialize empty answer string
+Initialize counter to zero 
+Loop through s 
+If s[i] is equal to ( if counter is > zero add ( to answer string and increment counter
+Else if s[i] is equal to ) and counter > one add ) to answer string and decrement counter
+Return answer 
 
 */
 

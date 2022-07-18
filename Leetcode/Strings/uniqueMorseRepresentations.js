@@ -20,9 +20,17 @@ Return the number of different transformations among all words we have.
  
 
 STEPS: 
+Set const morse to morse code from questions
+Initialize answer to new Set
+For of loop through words with word
+Initialize transform as empty string
+For loop through word to seperate each character
+Set i euqal to char.charCodeAt(0) - 97
+Add morse[i] to transform 
+Add transform to answer Set
+Return size of answer set
 
-
-
+set 
 
 
 
@@ -48,24 +56,20 @@ const uniqueMorseRepresentations1 = words => {
 
 
 //using SET
-var uniqueMorseRepresentations = function(words) {
-    var morse = [".-","-...","-.-.","-..",".","..-.",
-                  "--.","....","..",".---",
-                  "-.-",".-..","--","-.","---",".--.",
-                  "--.-",".-.","...","-","..-","...-",
-                  ".--","-..-","-.--","--.."];
+const morse = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+
+const uniqueMorseRepresentations = (words) => {
     
-    var transformations = new Set();
+    let answer = new Set
     
-    for (let word of words) {        
-        var trans = "";
-        for (let letter of word) {
-            var index = letter.charCodeAt(0) - 97;
-            trans += morse[index];
+    for (let word of words){
+        let transform = ''
+        for(let char of word){
+            let i = char.charCodeAt(0) - 97
+            transform += morse[i]
         }
-        
-        transformations.add(trans);   
+        answer.add(transform)
     }
     
-    return transformations.size;
+    return answer.size
 };

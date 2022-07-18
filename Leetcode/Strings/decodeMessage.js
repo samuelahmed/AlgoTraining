@@ -13,30 +13,72 @@ Return the decoded message.
 
 
 Notes:
-
+Create map variable of empty map()
+Set start at 97
+Initialize empty result string
+For of loop through key if map has i or is empty continue 
+If not set i as a string fromCharCode(start++)
+map.set('', '')
+For of loop through message and add map.get(m) to result
+Return result
 
 */
 
-
 const decodeMessage = (key, message) => {
-    
-    let map = new Map();
-    let start=97;
-    let result="";
 
-    for(let i=0; i<key.length;i++){
-        if(map.has(key[i])||key[i]===" "){
+    let map = new Map()
+    let start = 97
+    let result = ''
+    
+    for(let i of key){
+        if(map.has(i) || i === ' '){
             continue
         } else {
-        map.set(key[i],String.fromCharCode(start++)) 
+            map.set(i, String.fromCharCode(start++))
         }
     }
     
-    map.set(" "," "); 
+    map.set(' ', ' ')
     
     for(let m of message){
-        result+=map.get(m)
+        result += map.get(m)
     }
     
     return result
-};
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const decodeMessage2 = (key, message) => {
+    
+//     let map = new Map();
+//     let start=97;
+//     let result="";
+
+//     for(let i=0; i<key.length;i++){
+//         if(map.has(key[i])||key[i]===" "){
+//             continue
+//         } else {
+//         map.set(key[i],String.fromCharCode(start++)) 
+//         }
+//     }
+    
+//     map.set(" "," "); 
+    
+//     for(let m of message){
+//         result+=map.get(m)
+//     }
+    
+//     return result
+// };

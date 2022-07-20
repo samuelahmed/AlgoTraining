@@ -20,8 +20,16 @@ Example:
 
 
 STEPS
-
-
+Created class OrderedStream
+Setup constructor
+Set pointed to zero and initialize empty list 
+Insert (id, value)
+Initialize empty chunk array
+Set this.list[id-1] to value
+While loop through (this.list[this.pointer])
+Push (this.list[this.pointer]) into chunk
+Increment this.pointer
+Return chunk 
 */
 
 

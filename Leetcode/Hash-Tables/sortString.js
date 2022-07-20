@@ -19,7 +19,14 @@ Return the result string after sorting s with this algorithm.
 
 
 STEPS: 
-
+Initialize arr with Array.from(s) (splitting s into an array of its parts)
+Initialize empty answer string
+Sort arr 
+While loop through arr.length
+Filter arr so that if i === 0 or !== answer.length-1 increase answer by x and return false
+Else return true 
+Reverse arr
+Return answer 
 
 
 

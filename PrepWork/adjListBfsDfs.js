@@ -77,7 +77,7 @@ function bfs(start){
 //DOES A ROUTE FROM PHX to BKK exist? BFS is best here. 
 function dfs(start, visited = new Set()) {
 
-    console.log(start)
+    // console.log(start)
 
     visited.add(start);
 

@@ -19,14 +19,14 @@ If no second index value, return that value (should be destination)
 
 const destCity = (paths) => {
     
-    let departure = new Set()
+    let set = new Set()
     
     for(let path of paths){
-        departure.add(path[0])
+        set.add(path[0])
     }
     
     for(let path of paths){
-        if(!departure.has(path[1])){
+        if(!set.has(path[1])){
             return path[1]
         }
     }

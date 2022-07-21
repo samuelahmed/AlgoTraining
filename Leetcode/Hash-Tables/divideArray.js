@@ -13,7 +13,9 @@ The elements present in a pair are equal.
 Return true if nums can be divided into n pairs, otherwise return false.
 
 STEPS:
-
+Create empty map ()
+Loop through nums and if map has number delete it else set the number true
+Return true if map size is empty else return false
 
 
 */

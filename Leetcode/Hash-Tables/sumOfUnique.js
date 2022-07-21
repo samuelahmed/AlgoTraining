@@ -7,9 +7,11 @@ Return the sum of all the unique elements of nums.
  
 STEPS:
 
-
-
-
+Create empty Map()
+Initialize sum at zero 
+Loop through nums if map[n] is undefined increase sum by n and set map[n] to true
+Else if decrement n from sum and set map[n] to false 
+Return sum 
 
 
 
@@ -17,23 +19,27 @@ STEPS:
 */
 
 
+//with MAP 
+const sumOfUnique = (nums) => {
 
-let sumOfUnique = (nums) => {
-    let isUnique = {};
-    let sum = 0;
-    for(let n of nums) {
-      if(isUnique[n] === undefined) { //Encountering first time, add to sum
-        sum += n;
-        isUnique[n] = true;
-      } else if(isUnique[n]) { //Encountering second time, subtract from sum
-        sum -= n;
-        isUnique[n] = false; //Set to false so third or more occurrences will not get added to sum
-      }
+    let map = new Map()
+    let sum = 0
+    
+    for(let n of nums){
+        if(map[n] === undefined){
+            sum += n
+            map[n] = true
+        } else if(map[n]){
+            sum -= n
+            map[n] = false
+        }
     }
-    return sum;
-  }
+    
+    return sum
+}
 
 
+//with forEach
 var sumOfUnique = function(nums) {
     let result = []
     nums.forEach(function(e){
@@ -47,7 +53,7 @@ var sumOfUnique = function(nums) {
 
 
 
-
+//
 var sumOfUnique = function(nums) {
     let map = {};
     for(let num of nums) {

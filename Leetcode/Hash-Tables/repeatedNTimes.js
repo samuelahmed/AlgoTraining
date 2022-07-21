@@ -14,19 +14,21 @@ Return the element that is repeated n times.
 
 
  //WITH MAP 
- var repeatedNTimes = function(A) {
-    const map = {};
+ const repeatedNTimes = (nums) => {
     
-    for (let i = 0; i < A.length; i++) {
-        if (A[i] in map) {
-            return A[i];
+    const map = new Map()
+    
+    for ( let num of nums) {
+        if (num in map) {
+            return num;
         } else {
-            map[A[i]] = 0;
+            map[num] = 0;
         }
     }
     
     return 0;
 };
+
 
 
 

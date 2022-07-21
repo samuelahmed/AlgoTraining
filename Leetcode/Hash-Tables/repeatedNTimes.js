@@ -10,13 +10,17 @@ nums contains n + 1 unique elements.
 Exactly one element of nums is repeated n times.
 Return the element that is repeated n times.
 
+
+STEPS: 
+
+
 */
 
 
  //WITH MAP 
  const repeatedNTimes = (nums) => {
     
-    const map = new Map()
+    let map = new Map()
     
     for ( let num of nums) {
         if (num in map) {
@@ -25,10 +29,7 @@ Return the element that is repeated n times.
             map[num] = 0;
         }
     }
-    
-    return 0;
 };
-
 
 
 

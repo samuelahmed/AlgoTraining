@@ -32,7 +32,7 @@ const digitCount = (num) => {
 
 
 //uses less memory but more confusing 
-var digitCount = function(num) {
+var digitCount2 = function(num) {
     const numLength = num.length;
     const numArray = num.split('').map(Number);
     let result = "";

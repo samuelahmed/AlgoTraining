@@ -1,5 +1,6 @@
 /*
 1748. Sum of Unique Elements
+https://leetcode.com/problems/sum-of-unique-elements/
 You are given an integer array nums. The unique elements of an array are the elements that appear exactly once in the array.
 
 Return the sum of all the unique elements of nums.
@@ -40,7 +41,7 @@ const sumOfUnique = (nums) => {
 
 
 //with forEach
-var sumOfUnique = function(nums) {
+var sumOfUnique2 = function(nums) {
     let result = []
     nums.forEach(function(e){
         if(nums.indexOf(e)  == nums.lastIndexOf(e)){
@@ -54,7 +55,7 @@ var sumOfUnique = function(nums) {
 
 
 //
-var sumOfUnique = function(nums) {
+var sumOfUnique3 = function(nums) {
     let map = {};
     for(let num of nums) {
         map[num] ? map[num]++ : map[num] = 1 

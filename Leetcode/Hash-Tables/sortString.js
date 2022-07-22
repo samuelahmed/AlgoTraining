@@ -60,7 +60,7 @@ const sortString = (s) => {
 
 
 //solution 2
-var sortString = function(s) {
+var sortString2 = function(s) {
     let temp = new Array(26).fill(0);
     let ans = [];
     

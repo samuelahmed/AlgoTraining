@@ -12,6 +12,12 @@ Given two integers lowLimit and highLimit, return the number of balls in the box
 
 
 STEPS:
+Create new empty Map
+Loop from low to high limit incrementing i and setting sum to zero
+Loop through i with j using Math.trunc for the numbers that are more digits
+Map.set the numbers so the map is counting the values
+Return with math.max the map of split map with the highest values
+
 
 
 

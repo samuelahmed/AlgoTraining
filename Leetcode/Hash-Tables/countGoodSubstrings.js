@@ -27,8 +27,6 @@ Return answer
 */ 
 
 
-
-
 const countGoodSubstrings = (s) => {
     
 	let answer = 0

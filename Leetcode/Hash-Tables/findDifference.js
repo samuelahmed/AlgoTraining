@@ -10,13 +10,15 @@ answer[0] is a list of all distinct integers in nums1 which are not present in n
 answer[1] is a list of all distinct integers in nums2 which are not present in nums1.
 Note that the integers in the lists may be returned in any order.
 
+
+
+
 STEPS: 
 Set set1 to a new Set of nums1
 Set set2 to a new Set of nums2
 ForEach loop through nums2 where it will delete any values that are also in set1
 ForEach loop through nums1 where it will delete any values that are also in set2
 Return and array of split arrays set21 and set2
-
 */
 
 

@@ -21,21 +21,26 @@ Initialize answer at zero
 For loop through s.length  - 1
 Set str to  a slice of s that starts at i and goes till i+3
 Make a new Set(str)
-ff the size of the set is === 3, += 1 to answer
+If the size of the set is === 3, += 1 to answer
 Return answer
 
 */ 
 
 
-const countGoodSubstrings = (s) => {
-    
-	let answer = 0
 
-	for (let i = 0; i < s.length - 2; i++) {
-		let str = s.slice(i, i + 3)
-		let set = new Set(str)
-		if (set.size === 3) answer += 1
-	}
-    
-	return answer
+
+
+
+
+const countGoodSubstrings = (s) => {
+
+    let answer = 0
+
+    for (let i = 0; i < s.length - 2; i++) {
+        let str = s.slice(i, i + 3)
+        let set = new Set(str)
+        if (set.size === 3) answer += 1
+    }
+
+    return answer
 };

@@ -11,8 +11,12 @@ All occurrences of a character must be replaced with another character while pre
 
 
 STEPS:
-
-
+Initialize new Map()
+Loop through s.length 
+If there is no map['s' +s[i]] then add it and set to t[i]
+If there is no map['t' +t[i]] then add it and set to s[i]
+If t[i] is not equal to the s map or if s[i] is not equal to the t map return false 
+Return true
 
 */
 

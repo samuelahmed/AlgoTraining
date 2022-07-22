@@ -45,3 +45,5 @@ var digitCount2 = function(num) {
     
     return result === num
 };
+
+

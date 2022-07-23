@@ -18,7 +18,7 @@ Set set1 to a new Set of nums1
 Set set2 to a new Set of nums2
 ForEach loop through nums2 where it will delete any values that are also in set1
 ForEach loop through nums1 where it will delete any values that are also in set2
-Return and array of split arrays set21 and set2
+Return and array of split arrays set1 and set2
 */
 
 

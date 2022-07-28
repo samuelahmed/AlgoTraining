@@ -15,22 +15,22 @@ NOTES:
 
 
 const getLonelyNodes = (root) => {
-
-    let result = []
-
-    const dfs = root => {
-
-        if (!root) return result
-        if (!root.left && root.right) {
-            result.push(root.right.val)
-        }
+    
+    let result = [];
+    
+    const dfs = (root) => {
+        
+        if (!root) return result;
         if (!root.right && root.left) {
-            result.push(root.left.val) 
+            result.push(root.left.val);
         }
-        dfs(root.left)
-        dfs(root.right)
-    };
-
-    dfs(root)
-    return result
+        if (!root.left && root.right) {
+            result.push(root.right.val);
+        }
+        dfs (root.right);
+        dfs (root.left);
+    }
+    
+    dfs(root);
+    return result;
 };

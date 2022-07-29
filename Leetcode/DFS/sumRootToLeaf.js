@@ -11,8 +11,13 @@ For all leaves in the tree, consider the numbers represented by the path from th
 
 The test cases are generated so that the answer fits in a 32-bits integer.
 
-
-
+NOTES: 
+Start bfs function with (root, string)
+If no root return zero 
+String += root.val
+If no right and left root return parseInt(string, 2)
+Return dfs(root.right, string) + dfs(root.left, string)
+Return dfs(root, '')
 
 */
 
@@ -21,16 +26,16 @@ The test cases are generated so that the answer fits in a 32-bits integer.
 
 const sumRootToLeaf = (root) => {
     
-    const dfs = (node, string) => {
+    const dfs = (root, string) => {
         
-        if(!node) return 0;
-        string += node.val;
-        if(!node.left && !node.right){
+        if (!root) return 0;
+        string += root.val;
+        if (!root.right && !root.left) {
             return parseInt(string, 2);
         }
         
-        return dfs(node.right, string) + dfs(node.left, string);
-    };  
+        return dfs(root.right, string) + dfs(root.left, string);
+    };
     
     return dfs(root, '');
 };

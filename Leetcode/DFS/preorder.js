@@ -10,7 +10,12 @@ Nary-Tree input serialization is represented in their level order traversal. Eac
 
 
 STEPS:
-
+Initialize result as [] in function arguments
+If !root return results 
+Push root.val into results array
+For of loop throuhg child of root.children
+Recusive call to preorder(child, result) in loop
+Return results
 
 
 
@@ -35,20 +40,23 @@ const preorder = (root, result = []) => {
 
 
 //iterative 
-var preorder2 = function(root) {
+const preorderIterative = (root) => {
 
-    const stack = [];
-    const result = [];
+    let stack = [];
+    let result = [];
+
     if (!root) {
         return result;
     }
     stack.push(root);
+
     while(stack.length) {
-        const node = stack.pop();
+        let node = stack.pop();
         result.push(node.val);
         for(let i = node.children.length - 1; i >= 0; i--) {
             stack.push(node.children[i]);
         }
     }
+
     return result;
 };

@@ -13,6 +13,9 @@ Return math max of recursive call maxDepth for root left and root right plus one
 */
 
 
+
+
+
 const maxDepth = (root) => {
     
     if(root === undefined || root === null){
@@ -20,4 +23,23 @@ const maxDepth = (root) => {
     }
     
     return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1
+};
+
+
+
+const maxDepth = (root) => {
+    
+    let result = 0;
+    
+    const bfs = (node, level) => {
+        
+        if (!node) return;
+        if(level > result) result = level; 
+        
+        bfs(node.left, level +1);
+        bfs(node.right, level +1);
+    };
+    
+    bfs(root, 1);
+    return result;
 };

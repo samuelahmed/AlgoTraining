@@ -21,11 +21,14 @@ Return the number of items that match the given rule.
 
 
 const countMatches = (items, ruleKey, ruleValue) => {
-    const ruleIndex = {
+    let ruleIndex = {
         'type': 0,
         'color': 1,
         'name': 2
-    }
+    };
+    
     return items.reduce((ans,item) => 
     item[ruleIndex[ruleKey]] === ruleValue ? ans + 1 : ans, 0);
 };
+
+

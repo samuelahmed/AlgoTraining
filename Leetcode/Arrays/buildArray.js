@@ -19,6 +19,23 @@ With MAP:
 
 */
 
+
 const buildArray = (nums) => {
-    return nums.map(answer => nums[answer])
+
+    let result = [];
+
+    for (let i = 0; i<nums.length; i++) { 
+        result.push(nums[nums[i]]);
+    }
+
+    return result; 
+};
+
+
+
+
+const buildArray2 = (nums) => {
+
+    return nums.map(answer => nums[answer]);
+
 }

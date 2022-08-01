@@ -10,6 +10,8 @@ NOTES:
 Check for empty tress with if root is undefined or null and return zero
 Return math max of recursive call maxDepth for root left and root right plus one
 
+
+
 */
 
 

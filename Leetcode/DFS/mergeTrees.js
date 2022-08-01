@@ -12,7 +12,11 @@ Return the merged tree.
 Note: The merging process must start from the root nodes of both trees.
 
 NOTES: 
-
+If no root1 return root2, if no root2 return root1
+Root1.val += root2.val
+Root1.left = recusive call mergeTrees(root1.left, root2.left)
+Root1.right = mergeTrees(root1.right, root2.right)
+Return root1 
 
 */
 

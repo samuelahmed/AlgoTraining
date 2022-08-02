@@ -5,7 +5,8 @@ Given the root of a Binary Search Tree (BST), return the minimum difference betw
 
 
 STEPS:
-
+Initialize prev as null
+Initialize result as iniinity
 
 
 

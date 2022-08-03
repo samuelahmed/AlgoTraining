@@ -9,7 +9,13 @@ Find the node in the BST that the node's value equals val and return the subtree
 
 
 STEPS: 
-
+Initialize result as null 
+Build recursive const with (node) as argument
+If no node return result 
+If node.val is equal to val, result = node and return result
+If val lessthan node.val recursive node.left
+if val greaterthan node.val recursive node.right
+recursive throuhg root and return result
 
 */
 
@@ -18,19 +24,19 @@ STEPS:
 
 const searchBST = (root, val) => {
     
-    let result = [];
+    let result = null; 
     
     const recursive = (node) => {
         
-        if(!node) return result;
+        if(!node) return result; 
         if(node.val === val){
             result = node;
             return result;
         }
         if(val < node.val) recursive(node.left);
-        if(val > node.val) recursive(node.right);   
+        if(val > node.val) recursive(node.right);
     };
-    
+
     recursive(root);
     return result;
 };

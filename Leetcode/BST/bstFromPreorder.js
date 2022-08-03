@@ -27,7 +27,7 @@ const bstFromPreorder = (preorder) => {
 
 
 //longer solution
-const bstFromPreorder = (preorder) => {
+const bstFromPreorder2 = (preorder) => {
 
     let res = new TreeNode(preorder[0]);
     const insert = (root, val) => {

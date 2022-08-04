@@ -18,17 +18,13 @@ STEPS:
 
 */
 
-
-
 const bstToGst = (root) => {
     
-    //why is sum working?
     const getSum = (node, sum) => {
         
         if (!node) return sum;
-        
         node.val += getSum(node.right, sum);
-        return getSum(node.left, node.val);
+        return getSum(node.left, node.val)
     };
     
     getSum(root, 0);

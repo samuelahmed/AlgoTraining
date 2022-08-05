@@ -15,13 +15,13 @@ STEPS:
 //With dynamic programming
 const numTrees = (n) => {
     
-    let result = new Array(n+1).fill(0);
+    let result = new Array(n + 1).fill(0);
     result[0] = 1;
     result[1] = 1;
     
-    for (let i=2;i<=n;i++) {
-        for (let j=1;j<=i;j++) {
-            result[i] += result[j-1] * result[i - j];
+    for (let i = 2; i <= n; i++){
+        for (let j = 1; j <= i; j++){
+            result[i] += result[j - 1] * result[i - j];
         }
     }
     

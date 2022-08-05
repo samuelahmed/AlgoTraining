@@ -16,13 +16,12 @@ STEPS:
 const closestValue = (root, target) => {
     
     let child = target < root.val ? root.left : root.right;
-    
     if (!child) return root.val;
-    
     let closest = closestValue(child, target);
     
     return Math.abs(closest - target) < Math.abs(root.val - target) ? closest : root.val;
 };
+
 
 
 

@@ -15,7 +15,7 @@ If no node return result
 If node.val is equal to val, result = node and return result
 If val lessthan node.val recursive node.left
 if val greaterthan node.val recursive node.right
-recursive throuhg root and return result
+Recursive through root and return result
 
 */
 

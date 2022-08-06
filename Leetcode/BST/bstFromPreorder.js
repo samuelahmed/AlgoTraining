@@ -3,8 +3,14 @@
 https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/
 
 STEPS: 
-
-
+Construct recursive function with lower, upper 
+If preorder[0] less than lower or greaterthan upper return null
+If preorder.length === 0 return null 
+Initialize root as new TreeNode and shift first item of preorder into it
+Set root.left as recursive(lower, root.val)
+Set root.right as recursive(root.val, upper)
+Return root
+Return recursive(-Infinity, Infinity)
 
 
 */

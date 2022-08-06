@@ -7,30 +7,38 @@ Given the root of a binary search tree, return a balanced binary search tree wit
 A binary search tree is balanced if the depth of the two subtrees of every node never differs by more than 1.
 
 STEPS:
-
+Initalize builtArray as arrayBuilder(root)
+Return bstBuilder(builtArray)
+Construct helper arrayBuilder function 
+Construct helper bstBuilder function
 
 
 
 
 */
 
-
 const balanceBST = (root) => {
     
-    let values = toArray(root);
-    return toBST(values);
+    let builtArray = arrayBuilder(root);
     
-    function toBST(arr) {
-        if (arr.length === 0) return null;
-        if (arr.length === 1) return new TreeNode(arr[0]);
-        let mid = Math.floor(arr.length / 2);
-        let left = toBST(arr.slice(0, mid));
-        let right = toBST(arr.slice(mid + 1));
-        return new TreeNode(arr[mid], left, right);
-    };
+    return bstBuilder(builtArray);
+};
+
+const arrayBuilder = (node) => {
     
-    function toArray(node) {
-        if (!node) return [];
-        return [...toArray(node.left), node.val, ...toArray(node.right)];
-    };
+    if (!node) return [];
+    
+    return [...arrayBuilder(node.left), node.val, ...arrayBuilder(node.right)];
+};
+
+const bstBuilder = (arr) => {
+    
+    if (arr.length === 0) return null;
+    if (arr.length === 1) return new TreeNode(arr)
+    
+    let mid = Math.floor(arr.length / 2);
+    let left = bstBuilder(arr.slice(0, mid));
+    let right = bstBuilder(arr.slice(mid + 1));
+    
+    return new TreeNode(arr[mid], left, right);
 };

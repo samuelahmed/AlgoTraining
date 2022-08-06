@@ -7,6 +7,10 @@ Given the root of a binary search tree, and an integer k, return the kth smalles
  
 STEPS:
 
+Initialize stack, counter, and node
+While true if node stack.push and set node to left
+Else if stack is empty continue and increse counter
+If counter equal k return node.val otherwise move to node.right
 
 
 */
@@ -16,18 +20,18 @@ STEPS:
 const kthSmallest = (root, k) => {
     
     let stack = [];
-    let count = 0;
+    let counter = 0;
     let node = root;
     
-    while (true){
-        if (node){
+    while (true) {
+        if (node) {
             stack.push(node);
             node = node.left;
         } else {
-            if (stack.length == 0) break;
+            if (stack.length === 0) break;
             node = stack.pop();
-            count += 1;
-            if (count == k) return node.val;
+            counter += 1;
+            if (counter === k) return node.val;
             node = node.right;
         }
     }

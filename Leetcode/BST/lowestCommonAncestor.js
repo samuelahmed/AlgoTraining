@@ -8,7 +8,9 @@ According to the definition of LCA on Wikipedia: “The lowest common ancestor i
 
 
 STEPS: 
-
+If root.val is greater than p.val AND q.val recursive root.left, p, q
+If root.val is less than p.val AND q.val recursive root.right, p, q 
+Return root
 
 */
 

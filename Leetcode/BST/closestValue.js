@@ -6,8 +6,10 @@ https://leetcode.com/problems/closest-binary-search-tree-value/
 Given the root of a binary search tree and a target value, return the value in the BST that is closest to the target.
 
 STEPS:
-
-
+Initialize child as root.left if target lessthen root.val else as root.right
+If no child return root.val
+Set closest as recursive(child, target)
+Return closest if Math.abs(closest - target) < Math.abs(root.val - target) else return root.val
 */
 
 

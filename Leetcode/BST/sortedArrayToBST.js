@@ -3,8 +3,15 @@
 https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
 
 STEPS: 
-
-
+If nums is empty return null
+Build recursive with low, high as arguments
+Let mid equal Math.floor low + high divided by 2 
+Let root equal new TreeNode nums[mid]
+If low is greater than high return null
+Root.left = recursive(low, mid - 1)
+Root.right = recursive(mid + 1, high)
+Return root
+Return recursive(0, nums.length - 1)
 
 */
 

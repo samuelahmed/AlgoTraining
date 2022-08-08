@@ -12,7 +12,12 @@ Both the left and right subtrees must also be binary search trees.
 
 
 STEPS:
-
+Build getSum function with node and sum
+If no node return sum
+Set node.val += getSum(node.right, sum)
+Return getSum(node.left, node.val)
+Recursive call on getSum(root, 0)
+Return root
 
 
 

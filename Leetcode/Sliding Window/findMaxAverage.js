@@ -8,6 +8,14 @@ You are given an integer array nums consisting of n elements, and an integer k.
 
 Find a contiguous subarray whose length is equal to k that has the maximum average value and return this value. Any answer with a calculation error less than 10-5 will be accepted.
 
+
+STEPS:
+Initailize sum as zero 
+Loop through nums until k adding value to sum
+Set max to sum
+Loop through nums again updating sum to be sum-nums[i-k]+nums[i]
+Set max to biggest value of max and sum
+Return max divided by k 
 */
 
 

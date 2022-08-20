@@ -23,11 +23,11 @@ const arithmeticTriplets = (nums, diff) => {
     
     for (let i = 0; i < nums.length; i++) {
         if (nums[i] >= diff * 2){
-        if (object[nums[i]-diff] && object[nums[i] - diff * 2]) {
+            if (object[nums[i]-diff] && object[nums[i] - diff * 2]) {
                 result++
             }
         }   
-    object[nums[i]] = true;
+        object[nums[i]] = true;
     }
     
     return result;

@@ -71,6 +71,9 @@ function myAtoi (s) {
 
 
 
+
+
+
 function myAtoi2 (s) {
 
     let result = 0; 
@@ -101,7 +104,7 @@ function myAtoi2 (s) {
             break;
         }
     }
-    
+
     result = result * sign;
     
     if (result >= max) {

@@ -30,7 +30,6 @@ You are not allowed to solve the problem using any serialize methods (such as ev
 */
 
 
-
 const encode = function (strs) {
     return strs.reduce((result, strs) => {
         return result += (strs.length + '/' + strs)}, '')
